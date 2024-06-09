@@ -131,35 +131,109 @@
           </div>
           <!-- Rhombus part -->
           <div class="card w-72 bg-base-100 shadow-xl pt-10">
-            <img src="images/rectangle.png" alt="Rectangle" />
+            <img src="images/rhombus.png" alt="Rhombus" />
 
             <div class="card-body">
-              <h2 class="text-2xl text-center">Rectangle</h2>
-              <p class="text-center">Area (A) = w x l</p>
+              <h2 class="text-2xl text-center">Rhombus</h2>
+              <p class="text-center">Area (A) =0.5 x d1 x d2</p>
               <div class="flex py-3 pl-3 items-center">
                 <input
-                  id="input-width"
-                  class="w-28 mr-2 py-1 pl-3 rounded-lg"
+                  id="rhombus-d1"
+                  class="w-20 mr-1 py-1 pl-3 rounded-lg"
                   type="text"
-                  placeholder="Width"
+                  placeholder="Diagonal"
                 />
                 <p>cm</p>
                 <input
-                  id="input-length"
-                  class="w-28 mr-2 py-1 pl-3 rounded-lg"
+                  id="rhombus-d2"
+                  class="w-20 mr-1 py-1 pl-3 rounded-lg"
                   type="text"
-                  placeholder="Length"
+                  placeholder="Diagonal"
                 />
                 <p>cm</p>
               </div>
               <p class="text-center mb-2">
-                Rectangle Area : <span id="display-rectangle"></span> cm<sup
+                Rhombus Area : <span id="display-rhombus"></span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions">
+                <button
+                  onclick="calculateRhombusArea()"
+                  class="btn btn-primary w-full text-white"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Pentagon part -->
+          <div class="card w-72 bg-base-100 shadow-xl pt-10">
+            <img src="images/pentagon.png" alt="Pentagon" />
+
+            <div class="card-body">
+              <h2 class="text-2xl text-center">Pentagon</h2>
+              <p class="text-center">Area (A) = 0.5 x p x b</p>
+              <div class="flex py-3 pl-3 items-center">
+                <input
+                  id="peri"
+                  class="w-20 mr-1 py-1 pl-3 rounded-lg"
+                  type="text"
+                  placeholder="peri"
+                />
+                <p>cm</p>
+                <input
+                  id="apo"
+                  class="w-20 mr-1 py-1 pl-3 rounded-lg"
+                  type="text"
+                  placeholder="apo"
+                />
+                <p>cm</p>
+              </div>
+              <p class="text-center mb-2">
+                Pentagon Area : <span id="display-pentagon"></span> cm<sup
                   >2</sup
                 >
               </p>
               <div class="card-actions">
                 <button
-                  onclick="rectangleMethod()"
+                  onclick="calculatePentagonArea()"
+                  class="btn btn-primary w-full text-white"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Ellipse part -->
+          <div class="card w-72 bg-base-100 shadow-xl pt-10">
+            <img src="images/ellipse.png" alt="Ellipse" />
+
+            <div class="card-body">
+              <h2 class="text-2xl text-center">Ellipse</h2>
+              <p class="text-center">Area (A) = π x a x b</p>
+              <div class="flex py-3 pl-3 items-center">
+                <input
+                  id="pera-a"
+                  class="w-20 mr-1 py-1 pl-3 rounded-lg"
+                  type="text"
+                  placeholder="a"
+                />
+                <p>cm</p>
+                <input
+                  id="pera-b"
+                  class="w-20 mr-1 py-1 pl-3 rounded-lg"
+                  type="text"
+                  placeholder="b"
+                />
+                <p>cm</p>
+              </div>
+              <p class="text-center mb-2">
+                Ellipse Area : <span id="display-ellipse"></span> cm<sup
+                  >2</sup
+                >
+              </p>
+              <div class="card-actions">
+                <button
+                  onclick="calculateEllipseArea()"
                   class="btn btn-primary w-full text-white"
                 >
                   Calculate
@@ -176,5 +250,8 @@
     <script src="js/triangle.js"></script>
     <script src="js/rectangle.js"></script>
     <script src="js/parallelogram.js"></script>
+    <script src="js/rhombus.js"></script>
+    <script src="js/pentagon.js"></script>
+    <script src="js/ellipse.js"></script>
   </body>
 </html>
